@@ -7,17 +7,16 @@ const server = serve({
 
 console.log(`HTTP webserver running.  Access it at:  http://localhost:8080/ 🦕`);
 
-(async () => {
-  for await (const request of server) {
-    const bodyContent = `
+for await (const request of server) {
+  const bodyContent = `
       Your user-agent is:
       
       ${request.headers.get('user-agent') || 'Unknown'}
     `
 
-    request.respond({
-      status: 200,
-      body: `
+  request.respond({
+    status: 200,
+    body: `
         Hello Deno World!
                        __
                       / _)
@@ -28,6 +27,5 @@ console.log(`HTTP webserver running.  Access it at:  http://localhost:8080/ 🦕
         
         ${bodyContent}
       `
-    })
-  }
-})()
+  })
+}
