@@ -2,7 +2,7 @@ import { serve } from './deps.ts'
 
 const server = serve({
   hostname: '0.0.0.0',
-  port: 8080,
+  port: 3000,
 })
 
 console.log(`HTTP webserver running.  Access it at:  http://localhost:8080/ 🦕`);
