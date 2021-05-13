@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+    html, body, #app, .container {
+      height: 100%;
+    }
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .box {
+      font-size: 120px;
+      transform-origin: center;
+      animation: rotate infinite linear 1.5s;
+    }
+
+    @keyframes rotate {
+      0% {
+        transform: rotate(0);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+<div id="app">
+  <div class="container">
+    <h1>Hello Deno World!</h1>
+    <div class="box">
+      🦕
+    </div>
+  </div>
+</div>
+</body>
+</html>
